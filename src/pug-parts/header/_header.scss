@@ -1,0 +1,631 @@
+header.header {
+    position: relative;
+    z-index: 100;
+    background: linear-gradient(180deg, rgba(18, 18, 18, .03) 0, rgba(248, 248, 248, 0) 100%);
+    .header__container {
+        width: 100%;
+        .header__left-part {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            margin: 0 1.7em;
+            .colored {}
+            .header__logo {
+                max-width: 11.375em;
+                height: 3.125em;
+                flex-shrink: 0;
+                a.logo__link {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .header__slogan {
+                padding: 0 1.25em;
+                .slogan {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    .slogan__text {
+                        max-width: 15.625em;
+                        opacity: 0.5;
+                        font-size: 0.929em;
+                        line-height: 1.429em;
+                    }
+                }
+            }
+        }
+        .header__right-part {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            width: calc(100% + 2em);
+            .header__top-part {
+                display: flex;
+                align-items: center;
+                height: 3.5em;
+                padding: 0 2em 0 0;
+                justify-content: space-between;
+                .menus {}
+                .header__top-item {
+                    justify-content: flex-start;
+                    margin: 0 1em;
+                    flex: 0.3;
+                    &:first-child {
+                        flex: 0.7;
+                    }
+                    ul.menu-topest {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        li.menu-topest__item {
+                            margin: 0 1em;
+                            text-align: center;
+                            display: inline-block;
+                            vertical-align: top;
+                            padding: 0;
+                            list-style: none;
+                            line-height: calc(1em + 0.438em);
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            a.menu-topest__link {
+                                span {
+                                    font-size: 0.87em;
+                                }
+                            }
+                            .text--dark {}
+                            .color-theme-hover {}
+                            span {}
+                            ul.dropdown {}
+                        }
+                    }
+                }
+                .header__top-item {
+                    &:last-child {
+                        margin: 0;
+                    }
+                    .line-block {
+                        display: flex;
+                        align-items: center;
+                        flex-shrink: 0;
+                        justify-content: flex-end;
+                        .line-block__item {
+                            padding: 0 0.5em;
+                            &:first-child {
+                                padding: 0;
+                            }
+                            &:last-child {
+                                padding-right: 0;
+                            }
+                            .regions {
+                                .regions__chooser {
+                                    display: flex;
+                                    align-items: center;
+                                    &:hover span.regions__name {
+                                        color: $main-theme;
+                                    }
+                                    &:hover span svg {
+                                        fill: $main-theme;
+                                    }
+                                    cursor: pointer;
+                                    span svg {
+                                        transition: fill 0.2s ease-in-out;
+                                    }
+                                    span.icon-block__only-icon {}
+                                    span.icon-block__icon {
+                                        margin-right: 0.688em;
+                                    }
+                                    span.regions__name {
+                                        font-size: .86667em;
+                                        line-height: calc(1em + 0.438em);
+                                        transition: color 0.2s ease-in-out;
+                                    }
+                                    span.more-arrow {
+                                        margin-left: 0.5em;
+                                        margin-top: -0.225em;
+                                    }
+                                }
+                            }
+                        }
+                        .line-block__item {
+                            .phones {
+                                display: flex;
+                                .phones__phones-wrapper {
+                                    .phones__inner {
+                                        display: flex;
+                                        &:hover .phones__dropdown {
+                                            z-index: 1000;
+                                            visibility: visible;
+                                            opacity: 1;
+                                        }
+                                        span.icon-block__only-icon {
+                                            i.svg-inline-region {
+                                                svg {}
+                                            }
+                                        }
+                                        span.icon-block__icon {
+                                            display: block;
+                                            margin-right: 0.688em;
+                                        }
+                                        a {}
+                                        span.more-arrow {
+                                            margin-left: 0.5em;
+                                            margin-top: -0.125em;
+                                        }
+                                        .phones__dropdown {
+                                            position: absolute;
+                                            visibility: hidden;
+                                            top: -1.188em;
+                                            opacity: 0;
+                                            transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+                                            .dropdown--relative {
+                                                position: relative;
+                                            }
+                                            .dropdown {
+                                                z-index: 2;
+                                                padding: 1.423em;
+                                                background: $white;
+                                                min-width: 17.375em;
+                                                left: -1em;
+                                                .dropdown__item {
+                                                    padding: 0.40625em 0;
+                                                    &:first-child {
+                                                        padding-top: 0;
+                                                    }
+                                                    &:last-child {
+                                                        padding-bottom: 0;
+                                                    }
+                                                }
+                                                .phones__phone-more {
+                                                    &:hover a.phones__phone-link {
+                                                        color: $main-theme;
+                                                    }
+                                                    a.phones__phone-link {
+                                                        font-weight: 600;
+                                                        color: $gray;
+                                                        .phones__phone-descript {
+                                                            display: block;
+                                                            margin-top: -0.125em;
+                                                            font-weight: 400;
+                                                        }
+                                                        span.phones__dropdown-title {
+                                                            font-size: 0.8em;
+                                                            line-height: 1.584em;
+                                                            color: $dropdown__title--gray;
+                                                        }
+                                                    }
+                                                }
+                                                .callback-item {
+                                                    .btn.btn-default {}
+                                                }
+                                                .phones__dropdown-item {
+                                                    margin: 0;
+                                                    padding-top: 1.25em;
+                                                    padding-bottom: 0.25em;
+                                                    &:last-child {
+                                                        padding-top: 0.9em;
+                                                    }
+                                                    .phones__dropdown-title {
+                                                        font-size: 0.8em;
+                                                        line-height: 1.584em;
+                                                        color: $dropdown__title--gray;
+                                                    }
+                                                    .email__title {}
+                                                    .phones__dropdown-value {
+                                                        a.email-link {
+                                                            font-size: 0.934em;
+                                                            margin-top: 0.1em;
+                                                            line-height: 1.499em;
+                                                        }
+                                                        .address__text {
+                                                            font-size: 0.934em;
+                                                            margin-top: 0.1em;
+                                                            line-height: 1.499em;
+                                                        }
+                                                    }
+                                                }
+                                                .social-item {
+                                                    .social {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        position: relative;
+                                                        ul.social__items {
+                                                            display: flex;
+                                                            flex-wrap: wrap;
+                                                            padding: 0;
+                                                            li.social__item {
+                                                                margin: 0;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                a.social__link {
+                                                                    background-image: url('../../img/header/social.svg');
+                                                                    background-repeat: no-repeat;
+                                                                    width: 2.0625em;
+                                                                    height: 2.0625em;
+                                                                    border-radius: 4px;
+                                                                    display: block;
+                                                                    transition: opacity 0.3s ease-in-out;
+                                                                    &:hover {
+                                                                        opacity: 0.8;
+                                                                    }
+                                                                }
+                                                            }
+                                                            .social__item--image {
+                                                                padding: 3px;
+                                                            }
+                                                            .vk {
+                                                                a {
+                                                                    background-position: -5px -193px;
+                                                                }
+                                                            }
+                                                            .tel {
+                                                                a {
+                                                                    background-position: -334px -334px;
+                                                                }
+                                                            }
+                                                            .yt {
+                                                                a {
+                                                                    background-position: -99px -334px;
+                                                                }
+                                                            }
+                                                            .vi {
+                                                                a {
+                                                                    background-position: -334px -193px;
+                                                                }
+                                                            }
+                                                            .wh {
+                                                                a {
+                                                                    background-position: -334px -240px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .phones__callback {
+                                    padding-left: 0.5em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .header__main-inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 2em 0 0;
+                position: s;
+                .header__flex-part--left {
+                    flex: 1;
+                    justify-content: flex-start;
+                    display: flex;
+                    align-items: center;
+                    .header-menu {}
+                    .header__main-item {
+                        nav.mega-menu {
+                            z-index: 10;
+                            .header-menu__wrapper {
+                                display: flex;
+                                .header-menu__item {
+                                    position: static;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    height: 4.125em;
+                                    align-self: center;
+                                    margin: 0 28px;
+                                    cursor: pointer;
+                                    &:hover a span {
+                                        color: $main-theme;
+                                    }
+                                    &:first-child {
+                                        margin-left: 0;
+                                    }
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+                                    &:hover .header-menu__dropdown-menu,
+                                    &:hover .header-menu__dropdown-menu-lists {
+                                        opacity: 1;
+                                        visibility: visible;
+                                    }
+                                    a.header-menu__link {
+                                        span.header-menu__title {
+                                            font-weight: 600;
+                                            transition: color 0.2s ease-in-out;
+                                        }
+                                    }
+                                    .header-menu__dropdown-menu {
+                                        position: absolute;
+                                        right: 0;
+                                        left: 0;
+                                        top: 100%;
+                                        box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+                                        .mega-menu__section {
+                                            position: relative;
+                                            overflow: hidden;
+                                            max-height: 32.5em;
+                                            max-width: 100%;
+                                            height: 100%;
+                                            .mega-menu__section_container {
+                                                width: 100%;
+                                                .dropdown--relative {
+                                                    position: relative;
+                                                }
+                                                .dropdown {
+                                                    top: 100%;
+                                                    left: 0;
+                                                    background: $white;
+                                                    border-radius: 4px;
+                                                    .header-menu__wide-limiter {
+                                                        display: flex;
+                                                        flex-direction: row-reverse;
+                                                        justify-content: space-between;
+                                                        align-items: flex-start;
+                                                        padding: 40px;
+                                                        .header-menu__wide-right-part {
+                                                            width: 18.75em;
+                                                            .side_banners {
+                                                                .swiper.mySwiper {
+                                                                    position: relative;
+                                                                    min-height: 17em;
+                                                                    .swiper-wrapper {
+                                                                        .swiper-slide {
+                                                                            position: relative;
+                                                                            display: block;
+                                                                            width: 100%;
+                                                                            z-index: 1;
+                                                                            overflow: hidden;
+                                                                            a.slide-link {
+                                                                                img.link__img-size {
+                                                                                    width: 100%;
+                                                                                    height: 200px;
+                                                                                    border-radius: 4px;
+                                                                                }
+                                                                                .slide-title {
+                                                                                    margin-top: 1em;
+                                                                                    color: $dark-theme;
+                                                                                    font-size: 0.85em;
+                                                                                    font-weight: 700;
+                                                                                    transition: color 0.2s ease-in-out;
+                                                                                    &:hover {
+                                                                                        color: $main-theme;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    .swiper-controller__inline {
+                                                                        .swiper-pagination {
+                                                                            top: 0.7em;
+                                                                            text-align: left;
+                                                                            .swiper-pagination-bullet-active {
+                                                                                background: $main-theme;
+                                                                            }
+                                                                        }
+                                                                        .swiper-button {
+                                                                            top: 1em;
+                                                                            &::after {
+                                                                                content: "";
+                                                                            }
+                                                                        }
+                                                                        .swiper-button-next {
+                                                                            transform: rotate(180deg);
+                                                                            &::after {
+                                                                                content: "";
+                                                                            }
+                                                                        }
+                                                                        .swiper-button-prev {
+                                                                            left: 13.8125em;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        .header-menu__dropdown-menu-grids {
+                                                            display: grid;
+                                                            grid-template-columns: repeat(auto-fill, minmax(18.75em, 1fr));
+                                                            grid-gap: 40px;
+                                                            width: 100%;
+                                                        }
+                                                        ul.header-menu__dropdown-menu-inner {
+                                                            margin-bottom: 0;
+                                                            li.header-menu__dropdown-item {
+                                                                position: relative;
+                                                                display: flex;
+                                                                flex-direction: row;
+                                                                white-space: nowrap;
+                                                                padding: 0;
+                                                                margin: 0;
+                                                                .header-menu__dropdown-item-img--LEFT {
+                                                                    margin-right: 1.4em;
+                                                                    flex-shrink: 0;
+                                                                }
+                                                                .header-menu__dropdown-item-img {
+                                                                    width: 5.625em;
+                                                                    height: 3.75em;
+                                                                    display: flex;
+                                                                    align-items: flex-start;
+                                                                    justify-content: flex-end;
+                                                                    a {
+                                                                        position: relative;
+                                                                        display: block;
+                                                                        width: auto;
+                                                                        height: 3.75em;
+                                                                        border-radius: 4px;
+                                                                        overflow: hidden;
+                                                                        img {
+                                                                            vertical-align: middle;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                .header-menu__wide-item-wrapper {
+                                                                    white-space: normal;
+                                                                    overflow: hidden;
+                                                                    a.switcher-title {
+                                                                        span {
+                                                                            font-size: 0.95em;
+                                                                            line-height: calc(1em + 7px);
+                                                                            font-weight: 700;
+                                                                            color: $dark-theme;
+                                                                            transition: color 0.2s ease-in-out;
+                                                                            &:hover {
+                                                                                color: $main-theme;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    ul.header-menu__wide-submenu {
+                                                                        padding-top: 0.4375em;
+                                                                        margin: 0;
+                                                                        line-height: calc(1em + 6px);
+                                                                        li.header-menu__wide-submenu-item {
+                                                                            padding: 0.125em 0 0.0625em;
+                                                                            span.header-menu__wide-submenu-item-inner {
+                                                                                a.submenu-link {
+                                                                                    span.header-menu__wide-submenu-item-name {
+                                                                                        font-size: .93333em;
+                                                                                        line-height: calc(1em + 7px);
+                                                                                        color: $dropdown__title--gray;
+                                                                                        transition: color 0.2s ease-in-out;
+                                                                                        &:hover {
+                                                                                            color: $main-theme;
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            .header-menu__dropdown-item--img-LEFT {
+                                                                flex-direction: row;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .header-menu__dropdown-menu--fullW {
+                                        width: 99vw;
+                                        left: -23.4vw;
+                                    }
+                                    .header-menu__dropdown-menu-lists {
+                                        position: absolute;
+                                        top: 100%;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+                                        transition-delay: .2s;
+                                        .dropdown {
+                                            position: relative;
+                                            min-width: 15em;
+                                            background: $white;
+                                            border-radius: 4px;
+                                            left: -2em;
+                                            ul.header-menu__dropdown-menu-inner {
+                                                padding: 1.2em;
+                                                li.header-menu__dropdown-item {
+                                                    transition: color 0.2s ease-in-out;
+                                                    margin-bottom: 0.5em;
+                                                    color: $dark-theme;
+                                                    &:hover .submenu-link {
+                                                        color: $main-theme;
+                                                    }
+                                                    &:last-child {
+                                                        margin: 0;
+                                                    }
+                                                    .header-menu__dropdown-menu--submenu {
+                                                        position: absolute;
+                                                        left: 125%;
+                                                        top: -17px;
+                                                        width: 100%;
+                                                        opacity: 0;
+                                                        visibility: hidden;
+                                                        transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+                                                        transition-delay: .2s;
+                                                        ul.dropdown {
+                                                            padding: 1.2em;
+                                                        }
+                                                    }
+                                                    a.submenu-link {
+                                                        display: block;
+                                                        word-break: break-word;
+                                                        max-width: 100%;
+                                                        white-space: normal;
+                                                        position: relative;
+                                                        i {
+                                                            position: absolute;
+                                                            top: calc(1em / 2);
+                                                            transform: translateY(-50%);
+                                                            right: 0;
+                                                        }
+                                                    }
+                                                }
+                                                .header-menu__dropdown-item--with-dropdown {
+                                                    &:hover .header-menu__dropdown-menu--submenu {
+                                                        opacity: 1;
+                                                        visibility: visible;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .header__main-item {
+                    margin: 0 1em;
+                    flex-shrink: 0;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    .line-block {
+                        display: flex;
+                        align-items: center;
+                        .line-block__item {
+                            margin: 0 1.5em;
+                            cursor: pointer;
+                            .header-eyed {
+                                i {
+                                    svg.eyed-hidden {}
+                                }
+                            }
+                            .header-search {}
+                            .header-cabinet {}
+                            .phones__dropdown-item {}
+                            .header-button {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .border-bottom {
+        border-bottom: 1px solid rgba(0, 0, 0, .102);
+    }
+    .header-inner {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
