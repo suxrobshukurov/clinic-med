@@ -2,6 +2,9 @@ header.header {
     position: relative;
     z-index: 100;
     background: linear-gradient(180deg, rgba(18, 18, 18, .03) 0, rgba(248, 248, 248, 0) 100%);
+    & * {
+        font-family: 'Open Sans', sans-serif;
+    }
     .header__container {
         width: 100%;
         .header__left-part {
@@ -602,6 +605,9 @@ header.header {
                         align-items: center;
                         .line-block__item {
                             margin: 0 1.5em;
+                            &:last-child {
+                                margin-right: 0;
+                            }
                             cursor: pointer;
                             .header-eyed {
                                 i {

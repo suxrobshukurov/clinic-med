@@ -4,8 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-size: 16px;
-    background: url('../img/index/main-slide1.webp') top center no-repeat;
+    font-size: 0.82vw;
     background-size: auto;
     & * {
         position: relative;
@@ -13,10 +12,23 @@ body {
         margin: 0;
         padding: 0;
         line-height: 1;
-        font-size: 16px;
+        font-size: 0.82vw;
         outline: none;
         border: none;
     }
+}
+
+.main {
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+}
+
+.container {
+    width: 100%!important;
+    padding: 0;
 }
 
 a {
@@ -53,6 +65,10 @@ a.text--dark {
 
 .fill--dark {
     fill: $gray;
+    transition: fill 0.2s ease-in-out;
+    &:hover {
+        fill: $main-theme;
+    }
 }
 
 .light-opacity-hover {
@@ -86,6 +102,7 @@ a.text--dark {
 
 .btn {
     position: relative;
+    display: inline;
     font-size: 0.933em;
     font-weight: 700;
     text-align: center;
@@ -100,12 +117,32 @@ a.text--dark {
     padding: 0.5625em 1.25em 0.625em;
     cursor: pointer;
     overflow: hidden;
-    transition: background-color 0.1s ease;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .btn-default {
     background-color: $main-theme;
     color: $white;
+    border: 1px solid #fff0;
+    &:hover {
+        color: $white;
+    }
+    span {
+        background-color: #fff2;
+    }
+}
+
+.btn-white {
+    background-color: $white;
+    color: $main-theme;
+    border: 1px solid #fff0;
+    &:hover {
+        color: $white;
+        background-color: $main-theme;
+    }
+    span {
+        background-color: #fff2;
+    }
 }
 
 .btn.btn-wide {
@@ -117,28 +154,30 @@ a.text--dark {
     transition: opacity 0.3s;
 }
 
-.btn-hover__animated {
+.btn-posnawr {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    min-width: 50px;
+    max-width: 254px;
+    &:hover {
+        border: 1px solid $main-theme
+    }
+    &:hover span {
+        width: 325%;
+        height: 762.5px;
+    }
+    &:active {
+        background-color: $main-theme;
+    }
     span {
         position: absolute;
-        background: red;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        border-radius: 4px;
-        animation: animate 1s linear infinite;
-        z-index: 399;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transform: translate(-50%, -50%);
+        z-index: 1;
     }
 }
-
-// @keyframes animate {
-//     0% {
-//         width: 0;
-//         height: 0;
-//         opacity: 0.8;
-//     }
-//     100% {
-//         width: 200px;
-//         height: 200px;
-//         opacity: 0.8;
-//     }
-// }

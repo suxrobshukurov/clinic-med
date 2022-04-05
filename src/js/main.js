@@ -1,10 +1,5 @@
 jQuery(function() {
     console.log("hi")
-
-
-
-
-
 });
 
 (function() {
@@ -20,23 +15,44 @@ jQuery(function() {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+
+    });
+
+    //main slider 
+    let indexBigBanner = new Swiper('.maxwidth-banner-js', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        pagination: {
+            el: '.mb-carusel__dots',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.mb-button-next',
+            prevEl: '.mb-button-prev',
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        speed: 1000,
     });
 
     // hover position aware effect 
-    // const buttons = document.querySelectorAll(".btn-hover__animated");
+    const buttons = document.querySelectorAll(".btn-posnawr");
 
-    // buttons.forEach((button) => {
-    //     button.addEventListener('mouseenter', function(e) {
-    //         let x = e.pageX - e.target.offsetLeft;
-    //         let y = e.pageY - e.target.offsetTop;
-    //         let ripples = document.createElement('span');
-    //         ripples.style.left = x + "px";
-    //         ripples.style.top = y + "px";
-    //         this.appendChild(ripples);
+    buttons.forEach(button => {
+        ["mouseenter", "mouseout"].forEach(evt => {
+            button.addEventListener(evt, e => {
+                let parentOffset = button.getBoundingClientRect(),
+                    relX = e.pageX - parentOffset.left,
+                    relY = e.pageY - parentOffset.top;
 
-    //         setTimeout(() => {
-    //             ripples.remove()
-    //         }, 1000);
-    //     });
-    // });
+                const span = button.getElementsByTagName("span");
+
+                span[0].style.top = relY + "px";
+                span[0].style.left = relX + "px";
+            });
+        });
+    });
 })();

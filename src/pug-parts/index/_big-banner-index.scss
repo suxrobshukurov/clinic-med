@@ -1,0 +1,152 @@
+section.section {
+    position: relative;
+    flex: 0 0 auto;
+    .index-block {
+        .maxwidth-banner {
+            display: flex;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            .banners-big__wrapper {
+                width: 100%;
+                .mb-slider {
+                    .box {}
+                    .banner-big__item {
+                        height: 56.75em;
+                        .banner-big__container {
+                            max-width: 97.75em;
+                            height: 100%;
+                            margin: 0 auto;
+                            .banner-big__inner {
+                                height: 100%;
+                                display: flex;
+                                align-items: flex-end;
+                                .banner-big__text {
+                                    width: 100%;
+                                    height: 49.125em;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    // margin: 12em 0 12em 0;
+                                    z-index: 2;
+                                    .banner-big__top-text {
+                                        font-size: 0.933em;
+                                        line-height: 1.429em;
+                                        opacity: 0.5;
+                                        margin-bottom: 0.5625em;
+                                        color: $dark-theme;
+                                    }
+                                    .banner-big__title {
+                                        width: 80%;
+                                        font-size: 5.333em;
+                                        line-height: 1;
+                                        letter-spacing: -0.02em;
+                                        font-weight: 700;
+                                        color: $dark-theme;
+                                    }
+                                    .banner-big__text-wrapper {
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        margin-top: 1.3em;
+                                        .banner-big__text-block {
+                                            width: 50%;
+                                            font-size: 1.2em;
+                                            line-height: calc(1em + 10px);
+                                            color: $dark-theme;
+                                        }
+                                    }
+                                    .banner-big__buttons {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        margin: 1.875em 0 0 0;
+                                        .banner-big__buttons-item {
+                                            &:first-child {
+                                                margin-right: 1em;
+                                            }
+                                            a.btn {
+                                                padding: 1.0625em 1.625em;
+                                            }
+                                        }
+                                    }
+                                }
+                                .banner-big__img-wrapper {
+                                    width: 50%;
+                                    position: absolute;
+                                    top: auto;
+                                    bottom: 0;
+                                    right: 0;
+                                    line-height: 0;
+                                    img.banner-big__img {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mb-carusel__dots {
+            position: relative;
+            width: 10em;
+            left: 96.5em;
+            bottom: 5em;
+            z-index: 5;
+            .swiper-pagination-bullet {
+                height: 0.8em;
+                width: 0.8em;
+                margin: 0 0.8em 0 0;
+                background: $white;
+                opacity: 1;
+                border: 1px solid rgba(60, 60, 60, 0.128);
+                transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
+                &:hover {
+                    border: 1px solid $white;
+                    background-color: $main-theme;
+                }
+            }
+            .swiper-pagination-bullet-active {
+                border: 1px solid $main-theme;
+            }
+        }
+        .mb-nav {
+            display: flex;
+            position: absolute;
+            z-index: 5;
+            right: 12.7em;
+            bottom: 4.1em;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            .mb-button {
+                display: flex;
+                width: 2.5em;
+                height: 2.5em;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                margin-right: 0.5em;
+                background-color: $white;
+                border-radius: 4px;
+                transition: stroke 0.2s ease-in-out, background-color 0.2s ease-in-out;
+                &:hover {
+                    background-color: $main-theme;
+                }
+                &:hover i svg path {
+                    stroke: $white;
+                }
+                cursor: pointer;
+                i.mb-carousel__button {
+                    svg {
+                        path {}
+                    }
+                }
+                .mb-carousel__button--rigth {}
+                .mb-carousel__button--left {
+                    transform: rotate(180deg);
+                }
+            }
+            .mb-button-next {}
+            .mb-button-prev {}
+        }
+    }
+}
