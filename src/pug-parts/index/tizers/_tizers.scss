@@ -1,0 +1,38 @@
+section.section {
+    position: relative;
+    .index-block {
+        .tizers-list {
+            padding: 3.7em 0 4.9em;
+            .tizers-list-container {
+                .tizers-list {
+                    &__items-wrapper {}
+                    &__item-wrapper {}
+                    &__item {
+                        display: flex;
+                        height: 100%;
+                        flex-direction: row;
+                        &-image-wrapper {
+                            width: 3.925em;
+                            height: 3.925em;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 1.25em;
+                        }
+                        &-text-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            width: 80%;
+                            .tizer-list__item {
+                                &-name {}
+                                &-descr {
+                                    margin-top: 0.5em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

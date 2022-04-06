@@ -32,7 +32,7 @@ jQuery(function() {
         },
         loop: true,
         autoplay: {
-            delay: 2500,
+            delay: 4500,
             disableOnInteraction: false,
         },
         speed: 1000,
