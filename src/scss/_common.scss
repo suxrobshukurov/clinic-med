@@ -45,6 +45,7 @@ body {
         font-size: 0.86667em;
         line-height: calc(1em + 7px);
         margin-bottom: 0.75em;
+        color: $dropdown__title--gray;
     }
     &__title-wrapper {
         display: flex;
@@ -80,6 +81,21 @@ body {
     margin: 0 auto;
 }
 
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    &--direction-row {
+        flex-direction: row!important;
+    }
+}
+
+.flex {
+    &-1 {
+        flex: 1!important;
+    }
+}
+
 .grid-list {
     display: grid;
     grid-gap: 32px;
@@ -102,6 +118,19 @@ ul {
 .hidden {
     display: none!important;
     visibility: hidden!important;
+}
+
+.fixed {
+    display: block!important;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    right: 0;
+    left: 0;
+    opacity: 1!important;
+    z-index: 99999;
+    background: linear-gradient(180deg, rgb(255 255 255 / 73%) 0, rgb(248 248 248 / 56%) 100%);
+    backdrop-filter: blur(10px);
 }
 
 .text--light {
@@ -219,9 +248,18 @@ a.text--dark {
     width: 100%;
 }
 
-.lazyloaded {
-    opacity: 1;
-    transition: opacity 0.3s;
+.btn-transparent-border {
+    background-color: none;
+    color: $main-theme;
+    border: 1px solid $main-theme;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    &:hover {
+        color: $white;
+        background-color: $main-theme;
+    }
+    span {
+        background-color: #fff2;
+    }
 }
 
 .btn-posnawr {
@@ -234,8 +272,8 @@ a.text--dark {
         border: 1px solid $main-theme
     }
     &:hover span {
-        width: 325%;
-        height: 762.5px;
+        width: 225%;
+        height: 362.5px;
     }
     &:active {
         background-color: $main-theme;
@@ -246,7 +284,7 @@ a.text--dark {
         width: 0;
         height: 0;
         border-radius: 50%;
-        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transition: width 0.6s ease-in-out, height 0.6s ease-in-out;
         transform: translate(-50%, -50%);
         z-index: 1;
     }
@@ -279,4 +317,9 @@ a.text--dark {
         letter-spacing: -0.03em;
         line-height: calc(1em + 7px);
     }
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 0.3s;
 }

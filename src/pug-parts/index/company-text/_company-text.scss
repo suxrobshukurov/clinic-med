@@ -1,0 +1,41 @@
+.COMPANY_TEXT {
+    .company-text__inner {
+        padding-bottom: 5.5em;
+        .company-text__container {
+            .company-text__wrapper {
+                .company-item__heading {
+                    &>div {
+                        padding-right: 6.25em;
+                    }
+                    .company-item___text {
+                        margin: 1em 0 2.5em 0;
+                        p {
+                            margin-bottom: 1.8em;
+                            line-height: 1.5em;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                    .index-block__btn {
+                        width: 15.3em;
+                        a {
+                            padding: 0.9em 0;
+                        }
+                    }
+                }
+                .company-item__picture-wrapper {
+                    height: 31.25em;
+                    width: 46.875em;
+                    .company-item__picture {
+                        background: url('../../../img/company-text/company-text-left-img.webp') center center no-repeat;
+                        background-size: cover;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}

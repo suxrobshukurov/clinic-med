@@ -9,12 +9,12 @@ let gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('pug', async function() {
-	del.sync('src/*.html')
-	return gulp.src('src/pug/**/*.pug')
-		.pipe(pug({
-			pretty: true
-		}))
-		.pipe(gulp.dest('src/'))
+    del.sync('src/*.html')
+    return gulp.src('src/pug/**/*.pug')
+        .pipe(pug({
+            pretty: true
+        }))
+        .pipe(gulp.dest('src/'))
 })
 
 gulp.task('clean', async function() {
@@ -59,7 +59,7 @@ gulp.task('js', async function() {
             'node_modules/wowjs/dist/wow.min.js',
             'node_modules/swiper/swiper-bundle.min.js',
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/jquery.maskedinput/src/jquery.maskedinput.js'
+            'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -93,9 +93,9 @@ gulp.task('export', async function() {
 });
 
 gulp.task('watch', async function() {
-	gulp.watch('src/pug/**/*.pug', gulp.parallel('pug'));
-	gulp.watch('src/pug-parts/**/*.pug', gulp.parallel('pug'));
-	gulp.watch('src/pug-parts/**/*.scss', gulp.parallel('scss'));
+    gulp.watch('src/pug/**/*.pug', gulp.parallel('pug'));
+    gulp.watch('src/pug-parts/**/*.pug', gulp.parallel('pug'));
+    gulp.watch('src/pug-parts/**/*.scss', gulp.parallel('scss'));
     gulp.watch('src/scss/**/*.scss', gulp.parallel('scss'));
     gulp.watch('src/*.html', gulp.parallel('html'));
     gulp.watch('src/js/*.js', gulp.parallel('script'));

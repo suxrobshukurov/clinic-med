@@ -564,6 +564,7 @@ header.header {
                                                         transition-delay: .2s;
                                                         ul.dropdown {
                                                             padding: 1.2em;
+                                                            box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
                                                         }
                                                     }
                                                     a.submenu-link {
@@ -635,3 +636,5 @@ header.header {
         right: 0;
     }
 }
+
+@import './fixed-header'

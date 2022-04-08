@@ -1,9 +1,31 @@
 jQuery(function() {
     console.log("hi")
-});
 
-(function() {
-    // slider
+    // sticky header 
+    jQuery(document).on('scroll', function() {
+        if (jQuery(document).scrollTop() >= 210) {
+            jQuery('.header-fixed-js').addClass('fixed');
+        } else {
+            jQuery('.header-fixed-js').removeClass('fixed');
+        }
+    })
+
+    // hover position aware effect 
+    jQuery('.btn-posnawr')
+        .on('mouseenter', function(e) {
+            let parentOffset = jQuery(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+            jQuery(this).find('span').css({ top: relY, left: relX });
+        })
+        .on('mouseout', function(e) {
+            let parentOffset = jQuery(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+            jQuery(this).find('span').css({ top: relY, left: relX });
+        });
+
+    // menu slider
     let swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 0,
@@ -15,10 +37,9 @@ jQuery(function() {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-
     });
 
-    //main slider 
+    //slider big banner
     let indexBigBanner = new Swiper('.maxwidth-banner-js', {
         slidesPerView: 1,
         spaceBetween: 0,
@@ -27,8 +48,9 @@ jQuery(function() {
             clickable: true,
         },
         navigation: {
-            nextEl: '.mb-button-next',
-            prevEl: '.mb-button-prev',
+            //reverse button XD
+            nextEl: '.mb-button-prev',
+            prevEl: '.mb-button-next',
         },
         loop: true,
         autoplay: {
@@ -38,21 +60,18 @@ jQuery(function() {
         speed: 1000,
     });
 
-    // hover position aware effect 
-    const buttons = document.querySelectorAll(".btn-posnawr");
+    createMainSlider()
+});
 
-    buttons.forEach(button => {
-        ["mouseenter", "mouseout"].forEach(evt => {
-            button.addEventListener(evt, e => {
-                let parentOffset = button.getBoundingClientRect(),
-                    relX = e.pageX - parentOffset.left,
-                    relY = e.pageY - parentOffset.top;
-
-                const span = button.getElementsByTagName("span");
-
-                span[0].style.top = relY + "px";
-                span[0].style.left = relX + "px";
-            });
-        });
+function createMainSlider(sliderId = '.mainSlider', sliderPerView = 3, slideBetween = 1) {
+    let mainSlider = new Swiper(sliderId, {
+        slidesPerView: sliderPerView,
+        spaceBetween: slideBetween,
+        navigation: {
+            nextEl: 'mS-btn-next',
+            prevEl: 'ms-btn-prev',
+        },
+        loop: true,
+        speed: 1000,
     });
-})();
+}

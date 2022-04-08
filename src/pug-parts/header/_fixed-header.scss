@@ -1,0 +1,331 @@
+.header-fixed {
+    display: none;
+    opacity: 0;
+    transition: opacity ease 10ms;
+    .header__inner {
+        position: static;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+        .header__top-part {
+            .header__top-inner {
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 5.0625em;
+                padding: 0 2em;
+                z-index: 2;
+                .header__top-item {
+                    margin: 0 1em;
+                    flex-shrink: 0;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    .line-block {
+                        display: flex;
+                        align-items: center;
+                        .line-block__item {
+                            margin: 0 1.5em;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            cursor: pointer;
+                            .header-eyed {
+                                i {
+                                    svg.eyed-hidden {}
+                                }
+                            }
+                            .header-search {}
+                            .header-cabinet {}
+                            .phones__dropdown-item {}
+                            .header-button {}
+                        }
+                    }
+                }
+                .header-menu {
+                    flex: 1;
+                    justify-content: flex-start;
+                    display: flex;
+                    align-items: center;
+                    .mega-menu {
+                        z-index: 10;
+                        .header-menu__wrapper {
+                            display: flex;
+                            .header-menu__item {
+                                position: static;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                height: 4.125em;
+                                align-self: center;
+                                margin: 0 28px;
+                                cursor: pointer;
+                                &:hover a span {
+                                    color: $main-theme;
+                                }
+                                &:first-child {
+                                    margin-left: 0;
+                                }
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                                &:hover .header-menu__dropdown-menu,
+                                &:hover .header-menu__dropdown-menu-lists {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                                a.header-menu__link {
+                                    span.header-menu__title {
+                                        font-weight: 600;
+                                        transition: color 0.2s ease-in-out;
+                                    }
+                                }
+                                .header-menu__dropdown-menu {
+                                    position: absolute;
+                                    right: 0;
+                                    left: 0;
+                                    top: 100%;
+                                    box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+                                    .mega-menu__section {
+                                        position: relative;
+                                        overflow: hidden;
+                                        max-height: 32.5em;
+                                        max-width: 100%;
+                                        height: 100%;
+                                        .mega-menu__section_container {
+                                            width: 100%;
+                                            .dropdown--relative {
+                                                position: relative;
+                                            }
+                                            .dropdown {
+                                                top: 100%;
+                                                left: 0;
+                                                background: $white;
+                                                border-radius: 4px;
+                                                .header-menu__wide-limiter {
+                                                    display: flex;
+                                                    flex-direction: row-reverse;
+                                                    justify-content: space-between;
+                                                    align-items: flex-start;
+                                                    padding: 40px;
+                                                    .header-menu__wide-right-part {
+                                                        width: 18.75em;
+                                                        .side_banners {
+                                                            .swiper.mySwiper {
+                                                                position: relative;
+                                                                min-height: 17em;
+                                                                .swiper-wrapper {
+                                                                    .swiper-slide {
+                                                                        position: relative;
+                                                                        display: block;
+                                                                        width: 100%;
+                                                                        z-index: 1;
+                                                                        overflow: hidden;
+                                                                        a.slide-link {
+                                                                            img.link__img-size {
+                                                                                width: 100%;
+                                                                                height: 200px;
+                                                                                border-radius: 4px;
+                                                                            }
+                                                                            .slide-title {
+                                                                                margin-top: 1em;
+                                                                                color: $dark-theme;
+                                                                                font-size: 0.85em;
+                                                                                font-weight: 700;
+                                                                                transition: color 0.2s ease-in-out;
+                                                                                &:hover {
+                                                                                    color: $main-theme;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                .swiper-controller__inline {
+                                                                    .swiper-pagination {
+                                                                        top: 0.7em;
+                                                                        text-align: left;
+                                                                        .swiper-pagination-bullet-active {
+                                                                            background: $main-theme;
+                                                                        }
+                                                                    }
+                                                                    .swiper-button {
+                                                                        top: 1em;
+                                                                        &::after {
+                                                                            content: "";
+                                                                        }
+                                                                    }
+                                                                    .swiper-button-next {
+                                                                        transform: rotate(180deg);
+                                                                        &::after {
+                                                                            content: "";
+                                                                        }
+                                                                    }
+                                                                    .swiper-button-prev {
+                                                                        left: 13.8125em;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .header-menu__dropdown-menu-grids {
+                                                        display: grid;
+                                                        grid-template-columns: repeat(auto-fill, minmax(18.75em, 1fr));
+                                                        grid-gap: 40px;
+                                                        width: 100%;
+                                                    }
+                                                    ul.header-menu__dropdown-menu-inner {
+                                                        margin-bottom: 0;
+                                                        li.header-menu__dropdown-item {
+                                                            position: relative;
+                                                            display: flex;
+                                                            flex-direction: row;
+                                                            white-space: nowrap;
+                                                            padding: 0;
+                                                            margin: 0;
+                                                            .header-menu__dropdown-item-img--LEFT {
+                                                                margin-right: 1.4em;
+                                                                flex-shrink: 0;
+                                                            }
+                                                            .header-menu__dropdown-item-img {
+                                                                width: 5.625em;
+                                                                height: 3.75em;
+                                                                display: flex;
+                                                                align-items: flex-start;
+                                                                justify-content: flex-end;
+                                                                a {
+                                                                    position: relative;
+                                                                    display: block;
+                                                                    width: auto;
+                                                                    height: 3.75em;
+                                                                    border-radius: 4px;
+                                                                    overflow: hidden;
+                                                                    img {
+                                                                        vertical-align: middle;
+                                                                    }
+                                                                }
+                                                            }
+                                                            .header-menu__wide-item-wrapper {
+                                                                white-space: normal;
+                                                                overflow: hidden;
+                                                                a.switcher-title {
+                                                                    span {
+                                                                        font-size: 0.95em;
+                                                                        line-height: calc(1em + 7px);
+                                                                        font-weight: 700;
+                                                                        color: $dark-theme;
+                                                                        transition: color 0.2s ease-in-out;
+                                                                        &:hover {
+                                                                            color: $main-theme;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                ul.header-menu__wide-submenu {
+                                                                    padding-top: 0.4375em;
+                                                                    margin: 0;
+                                                                    line-height: calc(1em + 6px);
+                                                                    li.header-menu__wide-submenu-item {
+                                                                        padding: 0.125em 0 0.0625em;
+                                                                        span.header-menu__wide-submenu-item-inner {
+                                                                            a.submenu-link {
+                                                                                span.header-menu__wide-submenu-item-name {
+                                                                                    font-size: .93333em;
+                                                                                    line-height: calc(1em + 7px);
+                                                                                    color: $dropdown__title--gray;
+                                                                                    transition: color 0.2s ease-in-out;
+                                                                                    &:hover {
+                                                                                        color: $main-theme;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        .header-menu__dropdown-item--img-LEFT {
+                                                            flex-direction: row;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .header-menu__dropdown-menu--fullW {
+                                    width: 99vw;
+                                    left: -14.7vw;
+                                }
+                                .header-menu__dropdown-menu-lists {
+                                    position: absolute;
+                                    top: 100%;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+                                    transition-delay: .2s;
+                                    .dropdown {
+                                        position: relative;
+                                        min-width: 15em;
+                                        background: $white;
+                                        border-radius: 4px;
+                                        left: -2em;
+                                        ul.header-menu__dropdown-menu-inner {
+                                            padding: 1.2em;
+                                            li.header-menu__dropdown-item {
+                                                transition: color 0.2s ease-in-out;
+                                                margin-bottom: 0.5em;
+                                                color: $dark-theme;
+                                                &:hover .submenu-link {
+                                                    color: $main-theme;
+                                                }
+                                                &:last-child {
+                                                    margin: 0;
+                                                }
+                                                .header-menu__dropdown-menu--submenu {
+                                                    position: absolute;
+                                                    left: 125%;
+                                                    top: -17px;
+                                                    width: 100%;
+                                                    opacity: 0;
+                                                    visibility: hidden;
+                                                    transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+                                                    transition-delay: .2s;
+                                                    ul.dropdown {
+                                                        padding: 1.2em;
+                                                        box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
+                                                    }
+                                                }
+                                                a.submenu-link {
+                                                    display: block;
+                                                    word-break: break-word;
+                                                    max-width: 100%;
+                                                    white-space: normal;
+                                                    position: relative;
+                                                    i {
+                                                        position: absolute;
+                                                        top: calc(1em / 2);
+                                                        transform: translateY(-50%);
+                                                        right: 0;
+                                                    }
+                                                }
+                                            }
+                                            .header-menu__dropdown-item--with-dropdown {
+                                                &:hover .header-menu__dropdown-menu--submenu {
+                                                    opacity: 1;
+                                                    visibility: visible;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
