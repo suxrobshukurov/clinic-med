@@ -17,20 +17,28 @@
                 padding: 0 2em;
                 z-index: 2;
                 .header__top-item {
-                    margin: 0 1em;
+                    margin: 0 1em 0 2em;
                     flex-shrink: 0;
                     &:last-child {
                         margin-right: 0;
+                    }
+                    &:first-child {
+                        margin-left: 0;
                     }
                     .line-block {
                         display: flex;
                         align-items: center;
                         .line-block__item {
-                            margin: 0 1.5em;
+                            margin: 0 1.5em 0;
+                            cursor: pointer;
                             &:last-child {
                                 margin-right: 0;
                             }
-                            cursor: pointer;
+                            .header__logo {
+                                width: 5.875em;
+                                height: 3em;
+                                flex-shrink: 0;
+                            }
                             .header-eyed {
                                 i {
                                     svg.eyed-hidden {}
@@ -257,7 +265,8 @@
                                 }
                                 .header-menu__dropdown-menu--fullW {
                                     width: 99vw;
-                                    left: -14.7vw;
+                                    left: -10.1vw;
+                                    bottom: auto;
                                 }
                                 .header-menu__dropdown-menu-lists {
                                     position: absolute;

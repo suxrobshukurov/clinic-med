@@ -60,11 +60,21 @@ jQuery(function() {
         speed: 1000,
     });
 
-    createMainSlider()
+    // let staffSlider = new Swiper('.staffSlider', {
+    //     slidesPerView: 3,
+    //     spaceBetween: 1,
+    //     navigation: {
+    //         nextEl: 'mS-btn-next',
+    //         prevEl: 'ms-btn-prev',
+    //     },
+    //     loop: true,
+    //     speed: 1000,
+    // });
+    createMainSlider('.staffSlider')
 });
 
 function createMainSlider(sliderId = '.mainSlider', sliderPerView = 3, slideBetween = 1) {
-    let mainSlider = new Swiper(sliderId, {
+    new Swiper(sliderId, {
         slidesPerView: sliderPerView,
         spaceBetween: slideBetween,
         navigation: {

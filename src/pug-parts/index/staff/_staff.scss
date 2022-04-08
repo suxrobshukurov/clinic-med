@@ -1,0 +1,27 @@
+.staff-carousell-inner {
+    .staff-carousell {
+        .staff-carousell__item {
+            .staff-list__item {
+                &-image-wrapper {}
+                &-text-wrapper {
+                    .item-text-wrapper {}
+                }
+                &-additional-text-wrapper {}
+                &-text-top-part {
+                    .staff-list__info-wrapper {}
+                }
+                &-text-bottom-part {}
+                &-image {}
+                &-link {}
+                &-company {}
+                &-title {}
+                &-props {}
+                &-prop {}
+                &-phone {}
+                &-email {}
+                &-button {}
+            }
+        }
+    }
+    .staff-carousell-navigator {}
+}

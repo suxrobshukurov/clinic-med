@@ -15,6 +15,7 @@ header.header {
             .colored {}
             .header__logo {
                 max-width: 11.375em;
+                width: 11.375em;
                 height: 3.125em;
                 flex-shrink: 0;
                 a.logo__link {
@@ -249,7 +250,7 @@ header.header {
                                                                 display: flex;
                                                                 align-items: center;
                                                                 a.social__link {
-                                                                    background-image: url('../../img/header/social.svg');
+                                                                    background-image: url('../img/header/social.svg');
                                                                     background-repeat: no-repeat;
                                                                     width: 2.0625em;
                                                                     height: 2.0625em;

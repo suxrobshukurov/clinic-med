@@ -79,6 +79,7 @@ body {
 .maxwidth-theme {
     max-width: 95.05em;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .flexbox {
@@ -297,6 +298,11 @@ a.text--dark {
 }
 
 .font {
+    &_20 {
+        font-size: 1.33333em;
+        letter-spacing: -0.03em;
+        line-height: calc(1em + 7px);
+    }
     &_18 {
         font-size: 1.2em;
         letter-spacing: -0.03em;
@@ -317,9 +323,19 @@ a.text--dark {
         letter-spacing: -0.03em;
         line-height: calc(1em + 7px);
     }
+    &_13 {
+        font-size: .86667em;
+        letter-spacing: -0.03em;
+        line-height: calc(1em + 7px);
+    }
 }
 
 .lazyloaded {
     opacity: 1;
     transition: opacity 0.3s;
+}
+
+.logo {
+    width: 100%;
+    filter: invert(1);
 }
