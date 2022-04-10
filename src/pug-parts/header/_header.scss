@@ -42,6 +42,7 @@ header.header {
             }
         }
         .header__right-part {
+            position: static;
             display: flex;
             flex-direction: column;
             flex: 1;
@@ -250,7 +251,7 @@ header.header {
                                                                 display: flex;
                                                                 align-items: center;
                                                                 a.social__link {
-                                                                    background-image: url('../img/header/social.svg');
+                                                                    background-image: url("../img/header/social.svg");
                                                                     background-repeat: no-repeat;
                                                                     width: 2.0625em;
                                                                     height: 2.0625em;
@@ -306,21 +307,26 @@ header.header {
                 }
             }
             .header__main-inner {
+                position: static;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 0 2em 0 0;
-                position: s;
                 .header__flex-part--left {
+                    position: static;
                     flex: 1;
                     justify-content: flex-start;
                     display: flex;
                     align-items: center;
-                    .header-menu {}
+                    .header-menu {
+                        position: static;
+                    }
                     .header__main-item {
                         nav.mega-menu {
+                            position: static;
                             z-index: 10;
                             .header-menu__wrapper {
+                                position: static;
                                 display: flex;
                                 .header-menu__item {
                                     position: static;
@@ -526,8 +532,8 @@ header.header {
                                         }
                                     }
                                     .header-menu__dropdown-menu--fullW {
-                                        width: 99vw;
-                                        left: -23.4vw;
+                                        width: 100vw;
+                                        left: 0;
                                     }
                                     .header-menu__dropdown-menu-lists {
                                         position: absolute;
@@ -638,4 +644,4 @@ header.header {
     }
 }
 
-@import './fixed-header'
+@import './fixed-header';

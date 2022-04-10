@@ -52,13 +52,16 @@
                     }
                 }
                 .header-menu {
+                    position: static;
                     flex: 1;
                     justify-content: flex-start;
                     display: flex;
                     align-items: center;
                     .mega-menu {
+                        position: static;
                         z-index: 10;
                         .header-menu__wrapper {
+                            position: static;
                             display: flex;
                             .header-menu__item {
                                 position: static;
@@ -264,9 +267,9 @@
                                     }
                                 }
                                 .header-menu__dropdown-menu--fullW {
-                                    width: 99vw;
-                                    left: -10.1vw;
-                                    bottom: auto;
+                                    width: 100vw;
+                                    left: 0;
+                                    //bottom: auto;
                                 }
                                 .header-menu__dropdown-menu-lists {
                                     position: absolute;
