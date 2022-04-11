@@ -59,17 +59,6 @@ jQuery(function() {
         },
         speed: 1000,
     });
-
-    // let staffSlider = new Swiper('.staffSlider', {
-    //     slidesPerView: 3,
-    //     spaceBetween: 1,
-    //     navigation: {
-    //         nextEl: 'mS-btn-next',
-    //         prevEl: 'ms-btn-prev',
-    //     },
-    //     loop: true,
-    //     speed: 1000,
-    // });
     createMainSlider('.staffSlider')
 });
 

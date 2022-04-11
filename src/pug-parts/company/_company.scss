@@ -1,0 +1,35 @@
+.page-top-info {
+    padding: 10em 0 3em 0;
+}
+
+.navigation {
+    & * {
+        display: inline-block;
+    }
+    .breadcrumbs {
+        &__separator {
+            margin-right: 1em;
+        }
+        & span {
+            color: #000;
+            font-size: .86667em;
+            letter-spacing: -0.03em;
+            line-height: calc(1em + 7px);
+        }
+    }
+}
+
+.content {
+    display: flex;
+    .company-sidebar {
+        padding-right: 3em;
+        flex-shrink: 0;
+        width: 21.75em;
+    }
+    .company-content {
+        width: calc(100% - 21.75em);
+    }
+}
+
+@import "../company/company-content/company-content";
+@import "../company/sidebar/sidebar";

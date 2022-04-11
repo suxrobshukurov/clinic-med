@@ -1,0 +1,24 @@
+.page-top-info 
+    .page-top-wrapper
+        section.page-top.maxwidth-theme 
+            .page.title
+                h3.index-block__title.title_700 О клинике
+            .navigation
+                .breadcrumbs(itemscope itemtype="http://schema.org/BreadcrumbList")
+                    .breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+                        a.breadcrumbs__link(href="/" title="Главная" itemprop="item")
+                            span.text--dark Главная
+                            meta(itemprop="position" content="1")
+                    span.breadcrumbs__separator —
+                    span.breadcrumbs__item(itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope)
+                        span О клинике
+                        meta(itemprop="position" content="1")
+
+.container
+    .container-row
+        .content.maxwidth-theme
+            .company-sidebar
+                include ../sidebar/company-sidebar.pug
+            .company-content
+                include ../company-content/company-content.pug
+

@@ -1,0 +1,23 @@
+footer.footer {
+    border-top: 1px solid #ffffff1a;
+    background: #333;
+    .footer__main-part {
+        .maxwidth-theme {
+            .footer__main-part-inner {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.398);
+                .footer__part-item {
+                    .items {
+                        .item-title {}
+                        .item-wrap {
+                            .item-link {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer__bottom-part {
+        background: #333;
+        height: 20em;
+    }
+}

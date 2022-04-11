@@ -1,0 +1,35 @@
+.company-content__item {
+    margin-bottom: 1.5em;
+    color: $dark-theme;
+    img {
+        border-radius: 4px;
+    }
+    .content-item__title {
+        font-size: 1.73333em;
+        line-height: calc(1em + 14px);
+    }
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-left: 0;
+        margin-bottom: 0.5em;
+        &::before {
+            content: "";
+            position: relative;
+            left: 0;
+            top: 0.4em;
+            background: $dark-theme;
+            width: 0.6875em;
+            height: 1px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 0.625em;
+        }
+    }
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
