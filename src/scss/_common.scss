@@ -79,7 +79,6 @@ body {
 .maxwidth-theme {
     max-width: 95.05em;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 .flexbox {
@@ -216,7 +215,7 @@ a.text--dark {
     border-radius: 4px;
     padding: 0.5625em 1.25em 0.625em;
     cursor: pointer;
-    overflow: hidden;
+    overflow: hidden!important;
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
