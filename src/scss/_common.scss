@@ -138,13 +138,13 @@ ul {
 }
 
 .text--dark {
-    color: $dark-theme;
+    color: $dark-theme!important;
 }
 
 a.text--dark {
     transition: color 0.2s ease-in-out;
     &:hover {
-        color: $main-theme;
+        color: $main-theme!important;
     }
 }
 
