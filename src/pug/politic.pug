@@ -6,7 +6,7 @@ html(lang="ru")
 			name="viewport"
 			content="width=device-width, initial-scale=1"
 		)
-		title= "О клинике"
+		title= "Медицинский центр \"Ладья\""
 		link(
 			rel="stylesheet",
 			href="css/style.min.css"
@@ -15,6 +15,12 @@ html(lang="ru")
 		include ../pug-parts/header/header.pug
 
 		main.main
-			include ../pug-parts/company/company-block/index.pug
+			include ../pug-parts/politica/index.pug
+				
 
 		include ../pug-parts/footer/footer.pug
+
+		script(src="js/libs.min.js") 
+		script(src="js/main.js") 
+		script(src="js/jqModal.js") 
+

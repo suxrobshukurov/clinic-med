@@ -151,6 +151,7 @@ footer.footer {
                                                     line-height: 1.499em;
                                                 }
                                                 .address__text {
+                                                    color: $dark-theme;
                                                     font-size: 0.934em;
                                                     margin-top: 0.1em;
                                                     line-height: 1.499em;
@@ -294,6 +295,9 @@ footer.footer {
                     }
                     .bottom-link {
                         color: #999;
+                        &:hover {
+                            color: #ccc;
+                        }
                     }
                 }
                 .footer__pays {

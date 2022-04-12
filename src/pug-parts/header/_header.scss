@@ -57,7 +57,7 @@ header.header {
                 .header__top-item {
                     justify-content: flex-start;
                     margin: 0 1em;
-                    flex: 0.3;
+                    flex: 0.5;
                     &:first-child {
                         flex: 0.7;
                     }
@@ -335,7 +335,7 @@ header.header {
                                     justify-content: center;
                                     height: 4.125em;
                                     align-self: center;
-                                    margin: 0 28px;
+                                    margin: 0 1.75em;
                                     cursor: pointer;
                                     &:hover a span {
                                         color: $main-theme;
@@ -563,7 +563,7 @@ header.header {
                                                     .header-menu__dropdown-menu--submenu {
                                                         position: absolute;
                                                         left: 125%;
-                                                        top: -17px;
+                                                        top: auto;
                                                         width: 100%;
                                                         opacity: 0;
                                                         visibility: hidden;
