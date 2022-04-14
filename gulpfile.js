@@ -60,6 +60,7 @@ gulp.task('js', async function() {
             'node_modules/swiper/swiper-bundle.min.js',
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+            'src/js/tabs.js',
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())

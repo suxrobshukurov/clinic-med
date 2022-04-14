@@ -17,7 +17,76 @@
     .container-row
         .content.maxwidth-theme
             .company-sidebar
-                include ../sidebar/sidebar.pug
+                aside.sidebar
+                    ul.nav.nav-list.side-menu.bordered
+                        li.list-item.sidebar-list-js
+                            span.link-wrapper
+                                a.text--dark(href="company.html") О клинике
+                        li.list-item.sidebar-list-js.link-with-flag
+                            span.link-wrapper
+                                a.text--dark(href="faq.html") Вопросы и ответы
+                        li.list-item.sidebar-list-js
+                            span.link-wrapper
+                                a.text--dark(href="company.html") Отзывы
+                    .promo-block
+                        a.promo-link(href="index.html")
+                            img.promo-img(src="img/company/ads.jpg", alt="Вакцинация")
             .company-content
-                
+                .faq-content
+                    .faq-title
+                        | В этом разделе мы отвечаем на наиболее часто задаваемые вопросы наших пациентов.
+                        br
+                        | Не нашли ответ на волнующий вас вопрос? Свяжитесь с нами по почте, телефону или через онлайн-чат.
+                    .tabs
+                        ul.nav-tabs
+                            li.nav-tabs__item
+                                button.item-btn.is-active(data-target="#patients") Пациентам
+                            li.nav-tabs__item
+                                button.item-btn(data-target="#genIssues") Общие вопросы
+                            li.nav-tabs__item
+                                button.item-btn(data-target="#timetable") Расписание
+                    .tabs-content
+                        #patients.tab-content(data-content).is-active
+                            h2.tabs-content__title Пациентам
+                            ul.questions-list
+                                li.questions-item
+                                    .q-item__title Какие документы нужно брать с собой перед посещением вашей клиники
+                                    .q-item__description Только паспорт.
+                                li.questions-item
+                                    .q-item__title Могу ли я пройти обследование в вашей клинике
+                                    .q-item__description Да, это возможно.
+
+                        #genIssues.tab-content(data-content)
+                            h2.tabs-content__title Общие вопросы
+                            ul.questions-list
+                                li.questions-item
+                                    .q-item__title Могу ли я пройти обследование в вашей клинике
+                                    .q-item__description Да, это возможно.
+                                li.questions-item
+                                    .q-item__title Могу ли я получить вакцинацию в вашей клинике
+                                    .q-item__description Да, это возможно.
+                                li.questions-item
+                                    .q-item__title Могу ли я пройти текст на короновирус
+                                    .q-item__description Да, это возможно.
+                        #timetable.tab-content(data-content)
+                            h2.tabs-content__title Расписание
+                            ul.questions-list
+                                li.questions-item
+                                    .q-item__title Какой у вас режим работы?
+                                    .q-item__description Пн-Пт: 09:00 до 18:00
+                                li.questions-item
+                                    .q-item__title Могу ли я обратиться за помощью к врачу в 3 часа ночи?
+                                    .q-item__description Нет, это не возможно.
+
+                    .order-block-wrapper
+                        .order-info-block
+                            .line-block-item
+                                .svg-stroke
+                                    include ../../../src/img/icons/book.svg
+                            .line-block-item.flex-1
+                                .text.font_18 Не нашли ответа на свой вопрос? Свяжитесь с нами, и мы предоставим всю необходимую информацию
+                            .line-block-item
+                                .button-wrapper
+                                    a.btn.btn-default.btn-posnawr(href="#") Задать свой вопрос
+                                        span
 

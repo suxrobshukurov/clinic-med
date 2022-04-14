@@ -155,7 +155,8 @@ a.text--dark {
     }
 }
 
-.fill {
+.fill,
+.fill-theme-svg{
     fill: $main-theme!important;
     & * {
         fill: $main-theme!important;
@@ -256,7 +257,7 @@ a.text--dark {
 }
 
 .btn-transparent-border {
-    background-color: none;
+    background-color: transparent;
     color: $main-theme;
     border: 1px solid $main-theme;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;

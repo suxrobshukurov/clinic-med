@@ -1,9 +1,7 @@
 jQuery(function() {
-    console.log("hi")
-
     // sticky header 
     jQuery(document).on('scroll', function() {
-        if (jQuery(document).scrollTop() >= 210) {
+        if (jQuery(document).scrollTop() >= 170) {
             jQuery('.header-fixed-js').addClass('fixed');
         } else {
             jQuery('.header-fixed-js').removeClass('fixed');
