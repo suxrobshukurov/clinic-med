@@ -18,6 +18,12 @@ section.section {
                             align-items: center;
                             justify-content: center;
                             margin-right: 1.25em;
+                            .svg {
+                                svg {
+                                    width: 3.125em;
+                                    height: 3.125em;
+                                }
+                            }
                         }
                         &-text-wrapper {
                             display: flex;

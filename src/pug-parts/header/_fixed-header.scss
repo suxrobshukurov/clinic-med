@@ -44,6 +44,159 @@
                                     svg.eyed-hidden {}
                                 }
                             }
+                            .phones__inner {
+                                display: flex;
+                                &:hover .phones__dropdown {
+                                    z-index: 1000;
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                                span.icon-block__only-icon {
+                                    i.svg-inline-region {
+                                        svg {}
+                                    }
+                                }
+                                span.icon-block__icon {
+                                    display: block;
+                                    margin-right: 0.688em;
+                                }
+                                a {}
+                                span.more-arrow {
+                                    margin-left: 0.5em;
+                                    margin-top: -0.125em;
+                                }
+                                .phones__dropdown {
+                                    position: absolute;
+                                    visibility: hidden;
+                                    top: -1.188em;
+                                    opacity: 0;
+                                    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+                                    .dropdown--relative {
+                                        position: relative;
+                                    }
+                                    .dropdown {
+                                        z-index: 2;
+                                        padding: 1.423em;
+                                        background: $white;
+                                        min-width: 17.375em;
+                                        left: -1em;
+                                        .dropdown__item {
+                                            padding: 0.40625em 0;
+                                            &:first-child {
+                                                padding-top: 0;
+                                            }
+                                            &:last-child {
+                                                padding-bottom: 0;
+                                            }
+                                        }
+                                        .phones__phone-more {
+                                            &:hover a.phones__phone-link {
+                                                color: $main-theme;
+                                            }
+                                            a.phones__phone-link {
+                                                font-weight: 600;
+                                                color: $gray;
+                                                .phones__phone-descript {
+                                                    display: block;
+                                                    margin-top: -0.125em;
+                                                    font-weight: 400;
+                                                }
+                                                span.phones__dropdown-title {
+                                                    font-size: 0.8em;
+                                                    line-height: 1.584em;
+                                                    color: $dropdown__title--gray;
+                                                }
+                                            }
+                                        }
+                                        .callback-item {
+                                            .btn.btn-default {}
+                                        }
+                                        .phones__dropdown-item {
+                                            margin: 0;
+                                            padding-top: 1.25em;
+                                            padding-bottom: 0.25em;
+                                            &:last-child {
+                                                padding-top: 0.9em;
+                                            }
+                                            .phones__dropdown-title {
+                                                font-size: 0.8em;
+                                                line-height: 1.584em;
+                                                color: $dropdown__title--gray;
+                                            }
+                                            .email__title {}
+                                            .phones__dropdown-value {
+                                                a.email-link {
+                                                    font-size: 0.934em;
+                                                    margin-top: 0.1em;
+                                                    line-height: 1.499em;
+                                                }
+                                                .address__text {
+                                                    font-size: 0.934em;
+                                                    margin-top: 0.1em;
+                                                    line-height: 1.499em;
+                                                }
+                                            }
+                                        }
+                                        .social-item {
+                                            .social {
+                                                display: flex;
+                                                align-items: center;
+                                                position: relative;
+                                                ul.social__items {
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+                                                    padding: 0;
+                                                    li.social__item {
+                                                        margin: 0;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        a.social__link {
+                                                            background-image: url("../img/header/social.svg");
+                                                            background-repeat: no-repeat;
+                                                            width: 2.0625em;
+                                                            height: 2.0625em;
+                                                            border-radius: 4px;
+                                                            display: block;
+                                                            transition: opacity 0.3s ease-in-out;
+                                                            &:hover {
+                                                                opacity: 0.8;
+                                                            }
+                                                        }
+                                                    }
+                                                    .social__item--image {
+                                                        padding: 3px;
+                                                    }
+                                                    .vk {
+                                                        a {
+                                                            background-position: -5px -193px;
+                                                        }
+                                                    }
+                                                    .tel {
+                                                        a {
+                                                            background-position: -334px -334px;
+                                                        }
+                                                    }
+                                                    .yt {
+                                                        a {
+                                                            background-position: -99px -334px;
+                                                        }
+                                                    }
+                                                    .vi {
+                                                        a {
+                                                            background-position: -334px -193px;
+                                                        }
+                                                    }
+                                                    .wh {
+                                                        a {
+                                                            background-position: -334px -240px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                             .header-search {}
                             .header-cabinet {}
                             .phones__dropdown-item {}
@@ -274,6 +427,7 @@
                                 .header-menu__dropdown-menu-lists {
                                     position: absolute;
                                     top: 100%;
+                                    width: $dropdown-width;
                                     opacity: 0;
                                     visibility: hidden;
                                     transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
@@ -298,8 +452,8 @@
                                                 }
                                                 .header-menu__dropdown-menu--submenu {
                                                     position: absolute;
-                                                    left: 125%;
-                                                    top: -17px;
+                                                    left: calc(#{$dropdown-width} + 0.8em);
+                                                    top: 0;
                                                     width: 100%;
                                                     opacity: 0;
                                                     visibility: hidden;

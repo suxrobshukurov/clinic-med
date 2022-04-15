@@ -304,8 +304,8 @@ footer.footer {
                     i {
                         display: inline-block;
                         vertical-align: middle;
-                        margin: 0 10px;
-                        background: url('../img/footer/payment.svg') 0 0 no-repeat;
+                        margin: 0 0.625em;
+                        background: url("../img/footer/payment.svg") 0 0 no-repeat;
                         &:hover {
                             opacity: 1;
                         }
